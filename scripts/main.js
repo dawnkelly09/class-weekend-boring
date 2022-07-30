@@ -2,15 +2,15 @@ document.querySelector('#check').addEventListener('click', check)
 
 function check() {
 
-  const day = document.querySelector('#day').value
+  const day = document.querySelector('#day').value.toLowerCase()
   
 
   //Conditionals go here
-  if (day=='Tuesday'||day=='tuesday'||day=='Thursday'||day=='thursday') {
+  if (day=='tuesday'||day=='thursday') {
     let message = "It is a class day!"
     document.querySelector('#placeToSee').innerText = message
   }
-  else if (day==='Saturday'||day=='saturday'||day=='Sunday'||day=='sunday') {
+  else if (day=='saturday'||day=='sunday') {
     message = "It is the weekend!"
     document.querySelector('#placeToSee').innerText = message
   }
